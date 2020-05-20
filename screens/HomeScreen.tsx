@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
+import Product from '../components/Product';
+
 const HomeScreen = () => {
 	const [selectedMenu, setSelectedMenu] = useState('');
 
@@ -91,7 +93,11 @@ const HomeScreen = () => {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.main}>
-				<Text>B</Text>
+				<Product
+					productUri='https://image.freepik.com/free-vector/broken-frosted-glass-realistic-icon_1284-12125.jpg'
+					productName='WHITE DROP - D'
+					productPrice='150'
+				/>
 			</View>
 		</View>
 	);
@@ -100,12 +106,11 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
 	container: {
 		paddingTop: 22,
-		backgroundColor: '#fff',
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		alignItems: 'center',
 		height: '100%',
+		backgroundColor: '#f8f8fa',
 	},
 	sideBar: {
 		borderLeftWidth: 0,
@@ -117,6 +122,8 @@ const styles = StyleSheet.create({
 		height: '100%',
 		display: 'flex',
 		justifyContent: 'space-between',
+		minWidth: 20,
+		marginRight: 30,
 	},
 	brand: {
 		textAlign: 'center',
@@ -156,16 +163,17 @@ const styles = StyleSheet.create({
 	menuBtn: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: "center"
+		justifyContent: 'center',
 	},
 	menuBtnText: {
 		fontWeight: 'bold',
 		fontSize: 28,
 		transform: [{ rotate: '-90deg' }],
-		paddingBottom: 30
+		paddingBottom: 30,
 	},
 	main: {
 		flex: 5,
+		// paddingLeft: 30,
 	},
 });
 
