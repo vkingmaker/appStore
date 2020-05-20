@@ -1,9 +1,10 @@
 /** @format */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import Product from '../components/Product';
+import CollectionList from '../components/CollectionList';
 
 const HomeScreen = () => {
 	const [selectedMenu, setSelectedMenu] = useState('');
@@ -19,6 +20,14 @@ const HomeScreen = () => {
 	const handleChangeStateToTeaTime = () => {
 		setSelectedMenu('teaTime');
 	};
+
+	const collections = [
+		{
+			collectionName: 'spring',
+			collectionImg:
+				'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+		},
+	];
 
 	return (
 		<View style={styles.container}>
@@ -98,6 +107,8 @@ const HomeScreen = () => {
 					productName='WHITE DROP - D'
 					productPrice='150'
 				/>
+
+				<CollectionList collections={collections} />
 			</View>
 		</View>
 	);
@@ -173,7 +184,6 @@ const styles = StyleSheet.create({
 	},
 	main: {
 		flex: 5,
-		// paddingLeft: 30,
 	},
 });
 
