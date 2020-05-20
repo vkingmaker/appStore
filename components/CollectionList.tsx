@@ -6,14 +6,13 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import CollectionItem from './CollectionItem';
 import { ICollection } from '../constants/interface/Product';
 
-const Collection = (props: {collections: ICollection[]}) => {
+const CollectionList = (props: {collections: ICollection[]}) => {
 	return (
 		<>
     	<Text style={styles.collectionTitle}>Collection</Text>
 
-			<View>
+			<View style={styles.collectionList}>
 				{props.collections.map((collection: ICollection) => {
-					console.log('COLLECTION', collection);
 					return (
 						<CollectionItem collectionName={collection.collectionName} collectionImg={collection.collectionImg} />
 					)
@@ -30,7 +29,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 35,
     marginBottom: 20,
-  },
+	},
+	collectionList: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
+		marginRight: 30,
+	}
 });
 
-export default Collection;
+export default CollectionList;

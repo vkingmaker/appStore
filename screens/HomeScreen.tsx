@@ -27,6 +27,11 @@ const HomeScreen = () => {
 			collectionImg:
 				'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 		},
+		{
+			collectionName: 'summer',
+			collectionImg:
+				'https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+		},
 	];
 
 	return (
