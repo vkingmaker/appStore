@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 import SearchAndCart from '../components/SearchAndCart';
 
@@ -41,8 +41,8 @@ const DetailScreen = () => {
 						</View>
 					</View>
 				</View>
-				<MaterialCommunityIcons
-					name='heart-circle'
+				<Ionicons
+					name='md-trash'
 					size={48}
 					color='tomato'
 					style={styles.likeBtn}
@@ -128,8 +128,8 @@ const styles = StyleSheet.create({
 	},
 	lowerLayer: {
 		backgroundColor: '#fff',
-    paddingHorizontal: 24,
-    paddingVertical: 20,
+		paddingHorizontal: 24,
+		paddingVertical: 20,
 		position: 'relative',
 		zIndex: -1,
 	},
@@ -150,16 +150,16 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		height: 50,
 		display: 'flex',
-    justifyContent: 'center',
-    alignItems: "center",
-    backgroundColor: "#e7eff6",
-    marginTop: 26,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#e7eff6',
+		marginTop: 26,
 	},
 	btnText: {
 		fontSize: 12,
 		fontFamily: 'Montserrat-bold',
-    textTransform: "uppercase",
-  },
+		textTransform: 'uppercase',
+	},
 });
 
 export default DetailScreen;
