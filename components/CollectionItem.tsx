@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { ICollection } from '../constants/interface/Product';
+import { ICollection } from '../constants/interface/Index';
 
 const CollectionItem = (props: ICollection) => {
 	return (

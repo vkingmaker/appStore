@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-import Product from '../components/Product';
+import Products from '../components/Products';
 import CollectionList from '../components/CollectionList';
 
 const HomeScreen = () => {
@@ -31,6 +31,21 @@ const HomeScreen = () => {
 			collectionName: 'summer',
 			collectionImg:
 				'https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+		},
+	];
+
+	const products = [
+		{
+			productUri:
+				'https://image.freepik.com/free-vector/broken-frosted-glass-realistic-icon_1284-12125.jpg',
+			productName: 'WHITE DROP - D',
+			productPrice: '150',
+		},
+		{
+			productUri:
+				'https://image.freepik.com/free-vector/broken-frosted-glass-realistic-icon_1284-12125.jpg',
+			productName: 'SWATCH 1600',
+			productPrice: '3400',
 		},
 	];
 
@@ -107,12 +122,7 @@ const HomeScreen = () => {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.main}>
-				<Product
-					productUri='https://image.freepik.com/free-vector/broken-frosted-glass-realistic-icon_1284-12125.jpg'
-					productName='WHITE DROP - D'
-					productPrice='150'
-				/>
-
+				<Products data={products} />
 				<CollectionList collections={collections} />
 			</View>
 		</View>

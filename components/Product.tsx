@@ -4,7 +4,9 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Product = (props: {productName: string, productUri: string, productPrice: string}) => {
+import { IProduct } from '../constants/interface/Index';
+
+const Product = (props: IProduct) => {
 	return (
 		<View style={styles.productCard}>
 			<TouchableOpacity style={styles.product}>
@@ -62,10 +64,12 @@ const Product = (props: {productName: string, productUri: string, productPrice: 
 const styles = StyleSheet.create({
 	productCard: {
 		height: 320,
-		width: '65%',
+		width: 165,
 		display: 'flex',
 		alignItems: 'center',
 		position: 'relative',
+		marginRight: 20,
+		zIndex: -1,
 	},
 	product: {
 		height: '50%',
