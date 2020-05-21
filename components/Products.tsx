@@ -14,6 +14,7 @@ const Products = (props: IProducts) => {
 				return (
 					<Product
 						key={index}
+						navigate={props.navigation.navigate}
 						productName={product.productName}
 						productPrice={product.productPrice}
 						productUri={product.productUri}

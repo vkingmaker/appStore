@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 		width: '100%',
 		display: 'flex',
 		flexDirection: 'row',
-		alignItems: 'flex-end',
+		alignItems: 'center',
 		justifyContent: 'space-between',
 		marginBottom: 25,
 		marginTop: 10,
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
 		width: '30%',
 		flexDirection: 'row',
 		justifyContent: 'space-around',
-		marginRight: 8,
 		paddingVertical: 5,
 	},
 });
