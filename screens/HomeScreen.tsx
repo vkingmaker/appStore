@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
 	},
 	brandName: {
 		fontSize: 20,
-		fontWeight: '700',
+		fontFamily: 'Montserrat-bold',
 	},
 	options: {
 		height: '70%',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
 		transform: [{ rotate: '-90deg' }],
 		color: 'gray',
 		fontSize: 16,
-		fontWeight: '400',
+		fontFamily: 'Montserrat',
 	},
 	markSelected: {
 		backgroundColor: 'red',
