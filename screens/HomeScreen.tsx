@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import Products from '../components/Products';
 import CollectionList from '../components/CollectionList';
+import ScreenAndCart from '../components/SearchAndCart';
 
 const HomeScreen = () => {
 	const [selectedMenu, setSelectedMenu] = useState('');
@@ -122,6 +123,7 @@ const HomeScreen = () => {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.main}>
+				<ScreenAndCart />
 				<Products data={products} />
 				<CollectionList collections={collections} />
 			</View>
