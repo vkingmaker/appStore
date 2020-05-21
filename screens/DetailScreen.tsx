@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
 		marginBottom: 6,
 	},
 	label: {
-		fontSize: 16,
+		fontSize: 12,
+		fontFamily: 'Montserrat-bold',
 		letterSpacing: 4,
 		marginRight: 12,
 		textTransform: 'uppercase',
@@ -93,7 +94,8 @@ const styles = StyleSheet.create({
 		borderColor: '#be9b7b',
 	},
 	productName: {
-		fontSize: 32,
+		fontSize: 28,
+		fontFamily: 'Montserrat',
 		marginBottom: 30,
 	},
 	product: {
@@ -107,12 +109,14 @@ const styles = StyleSheet.create({
 		width: 130,
 	},
 	particulars: {
-		fontSize: 12,
+		fontSize: 10,
+		fontFamily: 'Montserrat',
 		textTransform: 'uppercase',
 		marginBottom: 3,
 	},
 	particularValue: {
-		fontSize: 20,
+		fontSize: 12,
+		fontFamily: 'Montserrat-bold',
 		textTransform: 'capitalize',
 		marginBottom: 20,
 	},
@@ -130,11 +134,13 @@ const styles = StyleSheet.create({
 		zIndex: -1,
 	},
 	overview: {
-		fontSize: 18,
+		fontSize: 14,
+		fontFamily: 'Montserrat-bold',
 		textTransform: 'capitalize',
 		marginBottom: 12,
 	},
 	productDetail: {
+		fontFamily: 'Montserrat',
 		textAlign: 'justify',
 		lineHeight: 22,
 	},
@@ -150,7 +156,8 @@ const styles = StyleSheet.create({
     marginTop: 26,
 	},
 	btnText: {
-    fontSize: 16,
+		fontSize: 12,
+		fontFamily: 'Montserrat-bold',
     textTransform: "uppercase",
   },
 });

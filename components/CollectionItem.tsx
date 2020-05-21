@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	collectionName: {
-		fontSize: 14,
+		fontSize: 12,
 		textTransform: 'uppercase',
-		letterSpacing: 4,
-		fontWeight: 'bold',
+		letterSpacing: 2,
+		fontFamily: 'Montserrat-bold',
 		color: 'gray',
 	},
 });

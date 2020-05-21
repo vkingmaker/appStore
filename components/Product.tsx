@@ -105,11 +105,12 @@ const styles = StyleSheet.create({
 	productName: {
 		fontSize: 15,
 		marginBottom: 10,
+		fontFamily: 'Montserrat'
 	},
 	productPrice: {
 		fontSize: 15,
-		fontWeight: 'bold',
 		marginBottom: 10,
+		fontFamily: 'Montserrat-bold'
 	},
 	rateProduct: {
 		height: 40,

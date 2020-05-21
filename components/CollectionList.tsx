@@ -32,7 +32,7 @@ const CollectionList = (props: { collections: ICollection[] }) => {
 const styles = StyleSheet.create({
 	collectionTitle: {
 		fontSize: 18,
-		fontWeight: 'bold',
+		fontFamily: 'Montserrat-bold',
 		marginTop: 35,
 		marginBottom: 20,
 	},
