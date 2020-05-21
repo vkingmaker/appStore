@@ -6,9 +6,11 @@ export interface ICollection {
 export interface IProduct {
 	productUri: string,
 	productName: string,
-	productPrice: string
+	productPrice: string,
+	navigate?: any
 }
 
 export interface IProducts {
-	data: IProduct[]
+	data: IProduct[],
+	navigation?: any,
 }

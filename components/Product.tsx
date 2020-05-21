@@ -9,7 +9,7 @@ import { IProduct } from '../constants/interface/Index';
 const Product = (props: IProduct) => {
 	return (
 		<View style={styles.productCard}>
-			<TouchableOpacity style={styles.product}>
+			<TouchableOpacity style={styles.product} onPress={()=> {  props.navigate('show')}}>
 				<Image
           style={styles.productImg}
 					source={{

@@ -7,7 +7,7 @@ import Products from '../components/Products';
 import CollectionList from '../components/CollectionList';
 import ScreenAndCart from '../components/SearchAndCart';
 
-const HomeScreen = () => {
+const HomeScreen = (props: any ) => {
 	const [selectedMenu, setSelectedMenu] = useState('');
 
 	const handleChangeStateToTopPick = () => {
@@ -123,8 +123,8 @@ const HomeScreen = () => {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.main}>
-				<ScreenAndCart />
-				<Products data={products} />
+				<ScreenAndCart showBackBtn={false} />
+				<Products data={products} navigation={props.navigation} />
 				<CollectionList collections={collections} />
 			</View>
 		</View>
