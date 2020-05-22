@@ -9,28 +9,42 @@ import Product from './Product';
 
 const Products = (props: IProducts) => {
 	return (
-		<ScrollView horizontal = { true } showsHorizontalScrollIndicator = { false } style={styles.container}>
-			{props.data.map((product: IProduct, index: number) => {
-				return (
-					<Product
-						key={index}
-						navigate={props.navigation.navigate}
-						productName={product.productName}
-						productPrice={product.productPrice}
-						productUri={product.productUri}
-					/>
-				);
-			})}
-		</ScrollView>
+		<>
+		<Text style={styles.productHeader}>Products</Text>
+		<View style={styles.container}>
+			<ScrollView
+				horizontal={true}
+				showsHorizontalScrollIndicator={false}>
+				{props.data.map((product: IProduct, index: number) => {
+					return (
+						<Product
+							key={index}
+							navigate={props.navigation.navigate}
+							productName={product.productName}
+							productPrice={product.productPrice}
+							productUri={product.productUri}
+						/>
+					);
+				})}
+			</ScrollView>
+		</View>
+	</>
 	);
 };
 
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
+	productHeader: {
+		fontSize: 28,
+		fontFamily: 'Montserrat',
+		marginBottom: 20,
+
+	},
+	container: {
+		height: 280,
+		display: 'flex',
 		flexDirection: 'row',
 		width: '100%',
-  }
+	},
 });
 
 export default Products;

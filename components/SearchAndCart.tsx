@@ -4,7 +4,7 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
-const SearchAndCart = (props: { showBackBtn: boolean }) => {
+const SearchAndCart = (props: { showBackBtn?: boolean, navigation?: any }) => {
 	return (
 		<View style={styles.container}>
 			{props.showBackBtn === true ? (
@@ -12,6 +12,7 @@ const SearchAndCart = (props: { showBackBtn: boolean }) => {
 					name='keyboard-backspace'
 					size={24}
 					color='black'
+					onPress={() => { props.navigation.goBack() }}
 				/>
 			) : (
 				<Text></Text>
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		marginBottom: 25,
 		marginTop: 10,
 	},
 	iconContainer: {

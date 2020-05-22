@@ -8,20 +8,8 @@ import CollectionList from '../components/CollectionList';
 import ScreenAndCart from '../components/SearchAndCart';
 
 const HomeScreen = (props: any ) => {
-	const [selectedMenu, setSelectedMenu] = useState('');
+	const [selectedMenu, setSelectedMenu] = useState('topPick');
 	const [isMenuOpen, toggleMenu] = useState(false);
-
-	const handleChangeStateToTopPick = () => {
-		setSelectedMenu('topPick');
-	};
-
-	const handleChangeStateToFunTime = () => {
-		setSelectedMenu('funTime');
-	};
-
-	const handleChangeStateToTeaTime = () => {
-		setSelectedMenu('teaTime');
-	};
 
 	const collections = [
 		{
@@ -61,7 +49,7 @@ const HomeScreen = (props: any ) => {
 					<TouchableOpacity
 						style={styles.optionBtn}
 						onPress={() => {
-							handleChangeStateToTopPick();
+							setSelectedMenu('topPick');
 						}}>
 						{selectedMenu === 'topPick' ? (
 							<View style={styles.markSelected}></View>
@@ -81,7 +69,7 @@ const HomeScreen = (props: any ) => {
 					<TouchableOpacity
 						style={styles.optionBtn}
 						onPress={() => {
-							handleChangeStateToTeaTime();
+							setSelectedMenu('teaTime');
 						}}>
 						{selectedMenu === 'teaTime' ? (
 							<View style={styles.markSelected}></View>
@@ -101,7 +89,7 @@ const HomeScreen = (props: any ) => {
 					<TouchableOpacity
 						style={styles.optionBtn}
 						onPress={() => {
-							handleChangeStateToFunTime();
+							setSelectedMenu('funTime');
 						}}>
 						{selectedMenu === 'funTime' ? (
 							<View style={styles.markSelected}></View>
@@ -128,7 +116,7 @@ const HomeScreen = (props: any ) => {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.main}>
-				<ScreenAndCart showBackBtn={false} />
+				<ScreenAndCart />
 				<Products data={products} navigation={props.navigation} />
 				<CollectionList collections={collections} />
 				<View
@@ -178,6 +166,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 	},
 	brandName: {
+		marginTop: 10,
 		fontSize: 20,
 		fontFamily: 'Montserrat-bold',
 	},

@@ -63,8 +63,8 @@ const Product = (props: IProduct) => {
 
 const styles = StyleSheet.create({
 	productCard: {
-		height: 320,
-		width: 165,
+		height: '100%',
+		width: 150,
 		display: 'flex',
 		alignItems: 'center',
 		position: 'relative',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     top: -25
   },
 	productDetails: {
-		paddingTop: '50%',
+		paddingTop: '45%',
 		paddingLeft: '10%',
 		paddingRight: '10%',
 		height: '60%',

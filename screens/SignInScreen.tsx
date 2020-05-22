@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const SignInScreen = () => {
+const SignInScreen = ( props:any ) => {
 	return (
 		<View style={styles.container}>
 			<Image
@@ -43,7 +43,7 @@ const SignInScreen = () => {
 						<TextInput style={styles.userTextInput} secureTextEntry={true} />
 					</View>
 				</View>
-				<TouchableOpacity style={styles.singInBtn}>
+				<TouchableOpacity style={styles.singInBtn} onPress={() => { props.navigation.navigate('Home')}}>
 					<Text style={styles.singInBtnLabel}>Sign In</Text>
 				</TouchableOpacity>
 			</View>

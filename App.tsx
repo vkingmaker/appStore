@@ -40,9 +40,9 @@ export default function App() {
 				screenOptions={{
 					headerShown: false,
 				}}>
+				<Stack.Screen name='landingPage' component={LandingPageScreen} />
 				<Stack.Screen name='signupPage' component={SignUpScreen} />
 				<Stack.Screen name='signInPage' component={SignInScreen} />
-				<Stack.Screen name='landingPage' component={LandingPageScreen} />
 				<Stack.Screen name='Home' component={HomeScreen} />
 				<Stack.Screen name='show' component={DetailScreen} />
 			</Stack.Navigator>
