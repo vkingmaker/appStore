@@ -6,11 +6,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 import SearchAndCart from '../components/SearchAndCart';
 
-const DetailScreen = () => {
+const DetailScreen = (props: any) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.upperLayer}>
-				<SearchAndCart showBackBtn={true} />
+				<SearchAndCart showBackBtn={true} navigation={props.navigation} />
 				<View>
 					<View style={styles.tag}>
 						<Text style={styles.label}>special</Text>
@@ -67,6 +67,7 @@ const DetailScreen = () => {
 const styles = StyleSheet.create({
 	container: {
 		paddingTop: 22,
+		height: '100%',
 	},
 	upperLayer: {
 		backgroundColor: '#e7eff6',
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		marginBottom: 6,
+		marginTop: 20,
 	},
 	label: {
 		fontSize: 12,

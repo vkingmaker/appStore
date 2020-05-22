@@ -27,7 +27,7 @@ const CollectionItem = (props: ICollection) => {
 const styles = StyleSheet.create({
 	collectionItem: {
 		width: '45%',
-		height: 180,
+		height: 150,
 		borderRadius: 6,
 		overflow: 'hidden',
 		elevation: 10,

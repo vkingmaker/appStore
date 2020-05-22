@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const LandingPageScreen = () => {
+const LandingPageScreen = (props: any) => {
   return (
     <View style={styles.container}>
       <Image style={styles.backgroundImg} source={require('../assets/images/web_shopping.png')} />
       <View style={styles.btnGroup}>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={() => { props.navigation.navigate('signupPage')}}>
           <Text style={styles.btnText}>Sign up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={() => { props.navigation.navigate('signInPage')}}>
           <Text style={styles.btnText}>Sign In</Text>
         </TouchableOpacity>
       </View>
