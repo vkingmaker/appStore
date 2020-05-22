@@ -9,6 +9,7 @@ import { AppLoading } from 'expo';
 import HomeScreen from './screens/HomeScreen';
 import DetailScreen from './screens/DetailScreen';
 import LandingPageScreen from './screens/LandingPageScreen';
+import SignInScreen from './screens/SignInScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,7 @@ export default function App() {
 				screenOptions={{
 					headerShown: false,
 				}}>
+				<Stack.Screen name='signInPage' component={SignInScreen} />
 				<Stack.Screen name='landingPage' component={LandingPageScreen} />
 				<Stack.Screen name='Home' component={HomeScreen} />
 				<Stack.Screen name='show' component={DetailScreen} />
