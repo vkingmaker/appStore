@@ -9,22 +9,54 @@ import {
 	Image,
 	TextInput,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 
-const SignInScreen = () => {
+const SignUpScreen = () => {
 	return (
 		<View style={styles.container}>
-			<Image
-				style={styles.backgroundImg}
-				source={require('../assets/images/fingerprint.png')}
-			/>
 			<View style={styles.loginForm}>
+				<View>
+					<Text style={styles.inputLabel}>First name</Text>
+					<View style={styles.customInput}>
+						<AntDesign
+							style={styles.iconInput}
+							name='user'
+							size={18}
+							color='gray'
+						/>
+						<TextInput style={styles.userTextInput} />
+					</View>
+				</View>
+				<View>
+					<Text style={styles.inputLabel}>Last name</Text>
+					<View style={styles.customInput}>
+						<AntDesign
+							style={styles.iconInput}
+							name='user'
+							size={18}
+							color='gray'
+						/>
+						<TextInput style={styles.userTextInput} />
+					</View>
+				</View>
 				<View>
 					<Text style={styles.inputLabel}>Email</Text>
 					<View style={styles.customInput}>
 						<MaterialCommunityIcons
 							style={styles.iconInput}
 							name='email-outline'
+							size={18}
+							color='gray'
+						/>
+						<TextInput style={styles.userTextInput} />
+					</View>
+				</View>
+				<View>
+					<Text style={styles.inputLabel}>Phone No.</Text>
+					<View style={styles.customInput}>
+						<AntDesign
+							style={styles.iconInput}
+							name='phone'
 							size={18}
 							color='gray'
 						/>
@@ -44,7 +76,7 @@ const SignInScreen = () => {
 					</View>
 				</View>
 				<TouchableOpacity style={styles.singInBtn}>
-					<Text style={styles.singInBtnLabel}>Sign In</Text>
+					<Text style={styles.singInBtnLabel}>Sign up</Text>
 				</TouchableOpacity>
 			</View>
 		</View>
@@ -61,17 +93,13 @@ const styles = StyleSheet.create({
 		display: 'flex',
 		alignItems: 'center',
 	},
-	backgroundImg: {
-		width: '100%',
-		height: 300,
-	},
 	loginForm: {
 		display: 'flex',
 		justifyContent: 'space-between',
 		position: 'absolute',
 		width: '80%',
 		bottom: '20%',
-		height: '28%',
+		height: '60%',
 	},
 	userTextInput: {
 		borderBottomWidth: 1,
@@ -111,4 +139,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default SignInScreen;
+export default SignUpScreen
