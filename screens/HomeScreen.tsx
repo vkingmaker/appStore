@@ -9,6 +9,7 @@ import ScreenAndCart from '../components/SearchAndCart';
 
 const HomeScreen = (props: any ) => {
 	const [selectedMenu, setSelectedMenu] = useState('');
+	const [isMenuOpen, toggleMenu] = useState(false);
 
 	const handleChangeStateToTopPick = () => {
 		setSelectedMenu('topPick');
@@ -118,7 +119,11 @@ const HomeScreen = (props: any ) => {
 						)}
 					</TouchableOpacity>
 				</View>
-				<TouchableOpacity style={styles.menuBtn}>
+				<TouchableOpacity
+					onPress={() => {
+						toggleMenu(!isMenuOpen);
+					}}
+					style={styles.menuBtn}>
 					<Text style={styles.menuBtnText}>...</Text>
 				</TouchableOpacity>
 			</View>
@@ -126,6 +131,19 @@ const HomeScreen = (props: any ) => {
 				<ScreenAndCart showBackBtn={false} />
 				<Products data={products} navigation={props.navigation} />
 				<CollectionList collections={collections} />
+				<View
+					style={[
+						styles.moreMenu,
+						isMenuOpen && styles.showMoreMenu,
+						!isMenuOpen && styles.hideMoreMenu,
+					]}>
+					<Text>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Quos repudiandae officiis doloribus optio voluptatum
+						sint, dignissimos sed dolores magnam! Quidem animi culpa
+						eum nemo quibusdam odio, saepe quis doloremque alias.
+					</Text>
+				</View>
 			</View>
 		</View>
 	);
@@ -201,6 +219,25 @@ const styles = StyleSheet.create({
 	},
 	main: {
 		flex: 5,
+	},
+	moreMenu: {
+		width: '65%',
+		height: 200,
+		position: 'absolute',
+		elevation: 11,
+		zIndex: 300,
+		bottom: 50,
+	},
+	showMoreMenu: {
+		backgroundColor: '#fff',
+		padding: 2,
+		left: -28,
+		opacity: 1,
+	},
+	hideMoreMenu: {
+		backgroundColor: 'green',
+		zIndex: -1,
+		opacity: 0,
 	},
 });
 
