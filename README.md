@@ -1,6 +1,6 @@
 # appStore
-appStore is UI built with expo/React native for a imaginary e-commerce. Even though it is not integrated to a backend
-you can be able to navigate the pages.
+appStore is UI built with `expo` for an imaginary e-commerce company. Even though it is not integrated to a backend
+you will be able to navigate the pages to see the intended features.
 
 To test the app:
 - Clone the repository
