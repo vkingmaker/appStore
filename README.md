@@ -6,4 +6,4 @@ To test the app:
 - Clone the repository
 - run `npm i` or `yarn install`
 - run `npm run start`
-- scan the barcode with the `expo` app install in your phone (preferably `android`) since it is not optimized for ios.
+- scan the barcode with the `expo` app installed on your phone (preferably `android`) since it is not optimized for ios.
